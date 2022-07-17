@@ -1,0 +1,109 @@
+.portfolio{
+    margin: 0 auto;
+    background-color: $light;
+    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+    background-blend-mode: screen, overlay;
+    padding: 1rem;
+    width: 100%;
+    h3{
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    @include desktop{
+        padding: 3rem 2rem;
+    }
+    .list-portafolio{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2rem;
+        row-gap: 1rem;
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include desktop{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+.project-card{
+    background-color: transparentize($color: #FFF, $amount: 0.6);
+    border-radius: 6px;
+    &:hover{  
+        .buttons{
+            @include desktop{
+                visibility: visible;
+            }
+        }
+    }
+    p{
+       margin: 10px 0;
+    }
+}
+.card-info{
+    padding: 4px 10px;
+    p:last-child{
+        font-size: 1.6rem;
+    }
+}
+.card-img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: all .2s ease-in;
+    @include desktop{
+        position: relative;
+        &:hover{
+            transform: translateY(-3px);
+            
+        }
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.buttons{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    @include desktop{
+        visibility: hidden;
+        gap: 2.5rem;
+    }
+    &:hover{
+        a{
+            transition: ease .3s all;
+        }
+        @include desktop{
+            transition: all .3s ease;
+            background-color: transparentize($color: #000000, $amount: 0.85);
+        }
+    }
+    a{
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+        color: #FFF;
+        background-color: $dark;
+        border: none;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 50%;
+        &:hover{
+            color: $salmon;
+            transform: scale(1.04);
+        }
+        &:active{
+            transform: scale(0.8);
+        }
+    }
+}
+.back{
+    z-index: -1;
+}

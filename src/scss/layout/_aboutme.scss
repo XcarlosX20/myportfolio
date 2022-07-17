@@ -1,0 +1,43 @@
+.aboutme{
+    padding: 3rem 0;
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.content-aboutme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2{
+        font-weight: bold;
+    }
+    .date{
+        color: red;
+        font-weight: bold;
+    }
+    .txt{
+        line-height: 1.5;
+    }
+}
+.image{
+    margin: 0 auto;
+    max-height: 500px;
+    max-width: 500px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://res.cloudinary.com/do5yybhwe/image/upload/v1625608468/portfolio/technology-gbf7092be6_1280-min_ha4rny.jpg");
+    overflow: hidden;
+   
+    img{
+        max-width: 100%;
+        height: auto;
+        filter: grayscale(90%);
+    }
+}

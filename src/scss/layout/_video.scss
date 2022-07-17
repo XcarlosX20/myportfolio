@@ -1,0 +1,181 @@
+.video{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:100vh ;
+    @include desktop{
+        display: block;
+        height: 100vh;
+    }
+    .overlay{
+        color: #FFF;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("https://res.cloudinary.com/do5yybhwe/image/upload/v1623559676/portfolio/work-programming_cu0pry.jpg");
+        @include desktop{
+            color: #000;
+            
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d4e4fc+0,a1b9fc+100&1+1,0.2+30,0.3+100 */
+        background: -moz-linear-gradient(-45deg,  rgba(212,228,252,1) 0%, rgba(211,228,252,1) 1%, rgba(196,215,252,0.2) 30%, rgba(161,185,252,0.3) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  rgb(27, 28, 29) 0%,rgba(211,228,252,1) 1%,rgba(196,215,252,0.2) 30%,rgba(161,185,252,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  rgba(212,228,252,1) 0%,rgba(211,228,252,1) 1%,rgba(196,215,252,0.2) 30%,rgba(161,185,252,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4fc', endColorstr='#4da1b9fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+    }
+    video{
+        display: none;
+        @include desktop{
+        min-width: 100%;
+        min-height: 100vh;
+        max-width: unset;
+        display: block;
+        z-index: 1;
+        }
+    }
+}
+.content-video{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 5;
+    background-color: transparentize($color: #000000, $amount: 0.7);
+    width: 100%;
+    h2{
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        .span{
+            margin-top: 0.6rem;
+            color: #FFF;
+            padding: 1rem 2rem;
+            font-weight: lighter;
+            
+            transition: all .5s ease;
+            &:hover{
+                text-decoration: none;
+                text-decoration: underline 4px #000;
+                text-underline-offset: 9px;
+            }
+        }
+        @include desktop{
+            font-size: 5rem;
+        }
+    }
+}
+.scroll-swipe{
+    display: block;
+    height: 3rem ;
+    position: absolute;
+    bottom: 20px;
+    color: #FFF;
+    .swipe{
+        font-size: 2.5rem;
+        @include desktop{
+            display: none;
+        }
+    }
+    .scrolldown{
+        @include desktop{
+            display: block;
+        }
+        
+    }
+}
+.scrolldown {
+    display: none;
+    margin: 0 auto;
+    --color: white;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: relative;
+    width: 3.5rem;
+    height: 5rem;
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    bottom: 20px;
+  }
+  
+  .scrolldown::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: var(--color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #ffffff66;
+  }
+  
+  @keyframes scrolldown-anim {
+    0% {
+      opacity: 0;
+      height: 6px;
+    }
+    40% {
+      opacity: 1;
+      height: 10px;
+    }
+    80% {
+      transform: translate(0, 20px);
+      height: 10px;
+      opacity: 0;
+    }
+    100% {
+      height: 3px;
+      opacity: 0;
+    }
+  }
+  .chevrons {
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    margin-top: 48px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chevrondown {
+    margin-top: -6px;
+    position: relative;
+    border: solid var(--color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+  }
+  .chevrondown:nth-child(odd) {
+    animation: pulse 500ms ease infinite alternate;
+  }
+  .chevrondown:nth-child(even) {
+    animation: pulse 500ms ease infinite alternate 250ms;
+  }
+  @keyframes pulse {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+  .animate__fadeOutUp{
+    --animate-duration: 1.5s;
+    @include desktop{
+     animation: none !important;
+    }
+}

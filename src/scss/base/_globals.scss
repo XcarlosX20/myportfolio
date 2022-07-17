@@ -1,0 +1,42 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+body{
+    font-family: $PrincipaFont;
+    font-size: 1.6rem;
+    margin: 0;
+}
+p{
+    font-size: 2rem;
+}
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+.p-0{
+    padding: 0 !important;
+}
+img{
+    max-width: 100%;
+}
+a{ 
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    margin: 0;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3{
+    font-size: 3rem;
+}

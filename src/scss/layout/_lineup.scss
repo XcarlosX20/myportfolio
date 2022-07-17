@@ -1,0 +1,86 @@
+.skills{
+    background-color: $dark;
+    padding: 3rem 0;
+    h3, p{
+        color: #FFF;
+        text-align: center;
+    }
+    .subtitle{
+        text-transform: uppercase;
+    }
+}
+.stage-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    @include desktop{
+    flex-direction: row;
+    justify-content: space-around;
+    }
+}
+.other-skills{
+display: flex;
+flex-direction: column;
+.card{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+@include desktop{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    .top{
+        grid-column: 3 / 2 ;
+        grid-row: 2 / 1;
+    }
+}
+}
+.card{
+    background: lighten($color: $dark, $amount: 10 );
+    width: 100%;
+    margin: 1rem 0;
+    ul{
+        list-style: none;
+        padding: 1rem;
+        line-height: 2;
+        li{
+            padding-left: 1rem;
+            font-size: 2rem;
+        }
+    }
+    p{  font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        color: $salmon-orange;
+        font-weight: 600;
+    }
+    
+    span{
+        font-weight: lighter;
+    }
+    @include desktop{
+        width: 40%;
+        margin-left: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+.striped{
+    li{ 
+        &:hover{
+            background-color: transparent;
+        }
+        &:nth-child(odd){
+            background-color: lighten($color: $dark, $amount: 7.5)
+            //border-bottom: 1px solid $salmon;
+            
+        }
+    }
+}
+
+li:hover{
+    cursor: auto;
+}
