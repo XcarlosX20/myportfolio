@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Sierra</title>
+  </head>
+
+  <body>
+    <header class="header animate__animated">
+      <div class="container container-header">
+        <div class="btn-burguer-container" id="btn-burguer-container">
+          <div class="btn-burguer" id="btn-burguer"></div>
+        </div>
+        <div class="cont-main hidden" id="main">
+          <ul>
+            <li id="main-item">
+              <a class="animate__animated" href="#aboutme">About me</a>
+            </li>
+            <li id="main-item">
+              <a class="animate__animated" href="#skills">Skills</a>
+            </li>
+            <li id="main-item">
+              <a class="animate__animated" href="#portfolio">Portfolio</a>
+            </li>
+            <li id="main-item">
+              <a class="animate__animated" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <h1>
+          Carlos Sierra
+          <span>Web developer</span>
+        </h1>
+        <nav class="main-navigation animate__animated">
+          <a class="animate__animated" href="#aboutme">About me</a>
+          <a class="animate__animated" href="#skills">Skills</a>
+          <a class="animate__animated" href="#portfolio">Portfolio</a>
+          <a class="animate__animated" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="video">
+      <div class="overlay">
+        <div class="content-video">
+          <h2>
+            Welcome. This is my portfolio!
+            <span class="span animate__animated animate__delay-1s"
+              ><a href="#contact">Do you have an idea?</a></span
+            >
+          </h2>
+          <div class="scroll-swipe animate__animated animate__infinite">
+            <span class="swipe">swipe &uarr;</span>
+            <div class="scrolldown">
+              <div class="chevrons"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <video lazing="loading" autoplay="autoplay" loop muted>
+        <source
+          src="https://res.cloudinary.com/do5yybhwe/video/upload/v1623556335/portfolio/writtingKeyBoard_ltvpxg.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/do5yybhwe/video/upload/v1623556335/portfolio/writtingKeyBoard_ltvpxg.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://res.cloudinary.com/do5yybhwe/video/upload/v1623556335/portfolio/writtingKeyBoard_ltvpxg.mp4"
+          type="video/ogg"
+        />
+      </video>
+    </div>
+    <div id="aboutme" class="container aboutme">
+      <div class="image">
+        <img
+          src="https://res.cloudinary.com/do5yybhwe/image/upload/v1630970729/portfolio/cs-removebg-preview_peccmq.png"
+          alt="cs"
+        />
+      </div>
+      <div class="content-aboutme">
+        <h2>Profile</h2>
+        <p class="date">From Falcon, Venezuela (GMT-4:00)</p>
+        <p class="txt">
+          Hi, I am a web developer currently I am more focused on the frontend
+          area. With more than 2 years learning in a self-taught way mostly with
+          online courses and putting these knowledge into practice through dev
+          challleges. I consider myself a neat, curious, communicative person,
+          and above all passionate about programming.
+        </p>
+        <p>
+          Below you will see all my skills and my work done on the web, I hope
+          you like it!
+        </p>
+      </div>
+    </div>
+    <section id="skills" class="skills">
+      <h3>Skills</h3>
+      <p class="subtitle"><i class="bi bi-front"></i> Frontend</p>
+      <div class="stage-container container">
+        <div class="card striped">
+          <p>JavaScript</p>
+          <ul>
+            <li>VanillaJS</li>
+            <li>DOM, windows & scripting.</li>
+            <li>Object-oriented programming and functional programming</li>
+            <li>LocalStorage & SessionStorage</li>
+            <li>Fetching of data with: fetch and axios.</li>
+            <li>Task runners: Gulp</li>
+            <li>Module Bundlers: Webpack</li>
+          </ul>
+        </div>
+        <div class="card striped">
+          <p class="stage-name">Web layout</p>
+          <ul>
+            <li>
+              Advanced handling of Flexbox, Grid, pseudoclases, animations,
+              positions
+            </li>
+            <li>Prepossessor CSS: SASS.</li>
+            <li>Responsive Web Design</li>
+            <li>Frameworks CSS: Bootstrap, materialize</li>
+            <li>Template Engine: Pug / EJS / Handlebars.</li>
+          </ul>
+        </div>
+        <div class="card striped">
+          <p class="stage-name">Frontend libraries</p>
+          <ul>
+            <li>React<span> (Advanced) </span></li>
+            <li>Redux<span> (Advanced) </span></li>
+            <li>Gatsby<span> (Advanced) </span></li>
+            <li>NextJS<span> (Advanced) </span></li>
+            <li>
+              Styled Components: Emotion, Material UI <span> (Advanced)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="other-skills container">
+        <p class="subtitle"><i class="bi bi-server"></i> Backend</p>
+        <div class="card striped">
+          <p class="stage-name">NodeJS</p>
+          <ul>
+            <li>Server: ExpressJS</li>
+            <li>REST API development</li>
+            <li>Design Patterns: (Model, View, Controller).</li>
+            <li>Connection with database MySQL using sequelize orm.</li>
+            <li>Connection with database MongoDB using mongoose orm.</li>
+          </ul>
+        </div>
+        <p class="subtitle top">
+          <i class="bi bi-lightbulb-fill"></i> Other Skills
+        </p>
+        <div class="card striped">
+          <p class="stage-name"><i class="bi bi-lightning-charge-fill"></i></p>
+          <ul>
+            <li>Version control system: Git/GitHub</li>
+            <li>Agile methodologies: Scrum</li>
+            <li>
+              Lenguages: spanish <span>(native)</span>, english
+              <span>(intermediate B1)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--PORTFOLIO-->
+    <section id="portfolio" class="portfolio">
+      <h3>Portfolio</h3>
+      <div class="list-portafolio" id="list-portafolio"></div>
+    </section>
+
+    <!--CONTACT ME-->
+    <div class="contact" id="contact">
+      <h3>Contact me</h3>
+      <div class="container-contact">
+        <form
+          method="POST"
+          action="https://formsubmit.co/carlossierra850@gmail.com"
+          name="contact"
+        >
+          <label class="contact-label"
+            >Fill out this form and let's get started!</label
+          >
+          <div class="container">
+            <div class="field">
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="NAME"
+                placeholder="Who are you?"
+                required
+              />
+            </div>
+            <div class="field">
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="EMAIL"
+                placeholder="email@email.com"
+                required
+              />
+            </div>
+            <div class="field textarea">
+              <label>Your message:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="7"
+                placeholder="Type me what you want!"
+                required
+              ></textarea>
+            </div>
+            <div class="loading">
+              <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+              </div>
+            </div>
+            <input id="submit" type="submit" />
+          </div>
+        </form>
+        <div class="container-social">
+          <hr />
+          <div class="social-media">
+            <h4>... and Follow me!</h4>
+            <p>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/carlos-sierra-5a996617b/"
+              >
+                <i class="bi bi-linkedin"></i>
+                My LinkedIn</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/carlosalejandro.sierrajimenez"
+              >
+                <i class="bi bi-facebook"></i>
+                My Facebook</a
+              >
+            </p>
+            <p>
+              <a target="_blank" href="https://t.me/carlsasj">
+                <i class="bi bi-telegram"></i>
+                My Telegram</a
+              >
+            </p>
+            <p>
+              <a target="_blank" href="https://github.com/XcarlosX20/">
+                <i class="bi bi-github"></i>
+                My GitHub
+              </a>
+            </p>
+            <p>
+              <a href="mailto:carlossierra850@gmail.com">
+                <i class="bi bi-envelope-fill"></i>
+                carlossierra850@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+  <script src="app.js"></script>
+</html>
