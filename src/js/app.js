@@ -116,10 +116,10 @@ const validateForm = () => {
 };
 const getProjects = async () => {
   const url = await fetch(
-    "https://gist.githubusercontent.com/XcarlosX20/7892306de1603262c4d39ba16c6af544/raw/72e8096cb59e7e905cbe36ef3670e05a64fd3f30/projectslist.json"
+    "https://api.jsonbin.io/v3/b/613576addfe0cf16eb55bc84/latest"
   );
   const res = await url.json();
-  const projects = await res;
+  const projects = await res.record;
   const listPortafolio = document.querySelector("#list-portafolio");
   projects.forEach((project) => {
     const { imageURL, name, tecnologies, url, urlGitHub } = project;
